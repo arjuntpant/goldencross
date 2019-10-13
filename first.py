@@ -4,6 +4,7 @@ import os
 import sys
 import turtle as a
 import random
+import tkinter as tk
 
 scr = a.Screen()
 scr.bgcolor('dark blue')
@@ -20,15 +21,18 @@ def draw_rectangle(length, width, color, a):
   a.right(90)
  a.end_fill()
 
-a.goto(0,200)
-draw_rectangle(525,200,"gold",a)
-draw_rectangle(200,525,"gold",a)
-a.goto(-400,200)
-draw_rectangle(525,200,"gold",a)
+a.goto(-60,50)
+#down
+draw_rectangle(100,400,"gold",a)
+#right
+draw_rectangle(600,100, "gold",a)
+a.goto(-560,50)
+#left
+draw_rectangle(600,100,"gold",a)
 a.penup()
-a.goto(200,400)
+a.goto(-60,400)
 a.pendown()
-draw_rectangle(200,525,"gold",a)
+draw_rectangle(100,400,"gold",a)
  
 def draw_star(points, size, angle, color,a):
  a.color(color)
@@ -87,8 +91,9 @@ for y in range(-290,-290+distance*5,distance):
   points=5
   angle=180- (180 /points)
   draw_star(points, size, angle, "white", a);
-
-
+  
+a.hideturtle()
+tk.mainloop()
 
 
 
